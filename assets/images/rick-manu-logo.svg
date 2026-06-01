@@ -1,0 +1,31 @@
+<svg width="834" height="834" viewBox="0 0 834 834" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Rick Manu logo</title>
+  <desc id="desc">Logo with dark teal background, centered teal square, two gold diagonal marks and Rick Manu text.</desc>
+
+  <defs>
+    <filter id="shadow-2xl" x="174" y="162" width="460" height="478" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="25" stdDeviation="25" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="834" height="834" fill="#073C3F"/>
+
+  <!-- Center square -->
+  <rect x="229" y="205" width="350" height="350" fill="#004D52" filter="url(#shadow-2xl)"/>
+
+  <!-- Decorative diagonal bars -->
+  <line x1="494" y1="289" x2="604" y2="180" stroke="#C9A06F" stroke-width="6"/>
+  <line x1="207" y1="580" x2="317" y2="471" stroke="#C9A06F" stroke-width="6"/>
+
+  <!-- Brand text: replace the font-family with the real font used by .font-feature if needed -->
+  <text
+    x="140"
+    y="405"
+    fill="#C9A06F"
+    font-family="Cinzel, serif"
+    font-size="84"
+    font-weight="300"
+    letter-spacing="8"
+  >Rick Manu</text>
+</svg>
