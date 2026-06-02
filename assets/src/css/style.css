@@ -95,4 +95,9 @@ body {
     #logo {
         scale: 0.75;
     }
+
+    .f-carousel__toolbar__column.is-right .f-button:not(:last-child),
+    .wp-block-gallery.has-nested-images figcaption {
+        display: none;
+    }
 }

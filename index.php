@@ -2,7 +2,7 @@
 
 <main class="bg-[#073C3F]">
 
-    <section id="intro" class="m-0 md:min-h-screen flex items-center justify-center relative">
+    <section id="intro" class="m-0 md:min-h-screen flex items-center justify-center overflow-hidden relative">
         <div id="logo" class="relative w-182 h-193.5 flex items-center justify-center overflow-hidden absolute">
 
             <div class="absolute w-87.5 h-87.5 bg-[#004D52] shadow-2xl"></div>
@@ -17,7 +17,6 @@
                 </h1>
 
                 <p class="font-main-text text-[#C9A06F] text-[16px] mt-6">
-                    <!-- <span id="role">developer</span> -->
                     &lt;<span id="role">developer</span>/&gt;
                 </p>
             </div>
@@ -40,12 +39,12 @@
         </div>
     </section>
 
-    <section id="about-me" class="rick-section container mx-auto py-16 px-4 sm:px-6">
-        <h1 class="font-feature text-[#C9A06F] border-b border-b-[#C9A06F] text-[64px] pb-3 mb-12">About me</h1>
+    <section id="about-me" class="rick-section container mx-auto py-8 md:py-16 px-4 sm:px-6">
+        <h1 class="font-feature text-[#C9A06F] border-b border-b-[#C9A06F] text-[32px] md:text-[64px] pb-3 mb-12">About me</h1>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[350px_1fr_300px] gap-6">
             <div class="border border-[#004D52] p-6">
-                <img class="grayscale w-100 mb-5" src="<?php echo get_template_directory_uri(); ?>/assets/images/rick-manu.jpg" />
+                <img class="grayscale w-100 mb-5 max-w-64" src="<?php echo get_template_directory_uri(); ?>/assets/images/rick-manu.jpg" />
                 <h2 class="font-feature text-[#C9A06F] text-[24px]">Ricardo Carvalho</h2>
                 <h3 class="font-feature text-[#C9A06F] mb-5">whoami</h3>
                 <p class="text-white leading-relaxed">
@@ -383,8 +382,8 @@
         </div>
     </section>
 
-    <section id="projects" class="rick-section py-16 px-4 sm:px-6">
-        <h1 class="font-feature text-[#C9A06F] container mx-auto border-b border-b-[#C9A06F] text-[64px] pb-3 mb-12">Projects</h1>
+    <section id="projects" class="rick-section py-8 md:py-16 px-4 sm:px-6">
+        <h1 class="font-feature text-[#C9A06F] container mx-auto border-b border-b-[#C9A06F] text-[32px] md:text-[64px] pb-3 md:mb-12">Projects</h1>
         <div class="text-center">
             <!-- Swiper -->
             <div class="swiper projects-slider">

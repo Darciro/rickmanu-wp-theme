@@ -36,12 +36,12 @@
     </div>
 </div>
 
-<main class="w-full max-w-4xl mx-auto py-20 px-10">
+<main class="w-full max-w-4xl mx-auto py-10 md:py-20 px-10">
     <?php
     if (have_posts()) :
         while (have_posts()) : the_post(); ?>
 
-            <h1 class="font-feature text-[#073C3F] border-b border-b-[#073C3F] text-[64px] pb-3 mb-12"><?php the_title(); ?></h1>
+            <h1 class="font-feature text-[#073C3F] border-b border-b-[#073C3F] text-[32px] md:text-[64px] pb-3 mb-12"><?php the_title(); ?></h1>
 
             <?php the_content(); ?>
 
