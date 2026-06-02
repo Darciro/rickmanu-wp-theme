@@ -328,9 +328,6 @@
   .h-193\.5 {
     height: calc(var(--spacing) * 193.5);
   }
-  .min-h-screen {
-    min-height: 100vh;
-  }
   .w-1\.5 {
     width: calc(var(--spacing) * 1.5);
   }
@@ -717,6 +714,16 @@
   .sm\:px-6 {
     @media (width >= 40rem) {
       padding-inline: calc(var(--spacing) * 6);
+    }
+  }
+  .md\:flex {
+    @media (width >= 48rem) {
+      display: flex;
+    }
+  }
+  .md\:min-h-screen {
+    @media (width >= 48rem) {
+      min-height: 100vh;
     }
   }
   .md\:max-w-1\/2 {
@@ -10640,6 +10647,11 @@ body {
 .actor__content--typing::after {
   content: '|';
   animation: blink 500ms infinite;
+}
+@media only screen and (max-width: 640px) {
+  #logo {
+    scale: 0.75;
+  }
 }
 @property --tw-rotate-x {
   syntax: "*";

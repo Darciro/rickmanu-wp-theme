@@ -2,7 +2,7 @@
 
 <main class="bg-[#073C3F]">
 
-    <section id="intro" class="m-0 min-h-screen flex items-center justify-center relative">
+    <section id="intro" class="m-0 md:min-h-screen flex items-center justify-center relative">
         <div id="logo" class="relative w-182 h-193.5 flex items-center justify-center overflow-hidden absolute">
 
             <div class="absolute w-87.5 h-87.5 bg-[#004D52] shadow-2xl"></div>
@@ -24,7 +24,7 @@
 
         </div>
 
-        <div class="absolute bottom-0 left-0 w-full flex flex-col items-center">
+        <div class="absolute bottom-0 left-0 w-full flex flex-col items-center hidden md:flex">
             <nav class="w-full">
                 <?php
                 wp_nav_menu(array(

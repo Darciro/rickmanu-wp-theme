@@ -20,4 +20,4 @@ if (! defined('RICKMANU_SLUG')) {
 require_once get_template_directory() . '/inc/class-theme-setup.php';
 require_once get_template_directory() . '/inc/class-enqueue-scripts.php';
 require_once get_template_directory() . '/inc/class-split-nav-walker.php';
-require_once get_template_directory() . '/inc/class-fancybox-gallery.php';
+require_once get_template_directory() . '/inc/class-gallery-lightbox.php';

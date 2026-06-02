@@ -6,6 +6,17 @@ import Swiper from "swiper";
 import { EffectCoverflow, Navigation, Autoplay } from "swiper/modules";
 import { Fancybox } from "@fancyapps/ui";
 
+// Gallery lightbox — works on every page that has a rickmanu gallery.
+Fancybox.bind('[data-fancybox^="rickmanu-gallery-"]', {
+    animated: true,
+    showClass: "fancybox-zoomInUp",
+    hideClass: "fancybox-fadeOut",
+    Thumbs: { type: "modern" },
+    caption: function (fancybox, slide) {
+        return slide.el?.dataset?.caption ?? "";
+    },
+});
+
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const smoother = ScrollSmoother.create({
