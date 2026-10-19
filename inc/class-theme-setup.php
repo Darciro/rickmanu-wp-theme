@@ -13,7 +13,7 @@ if (!class_exists('Theme_Setup')) :
         {
             load_theme_textdomain('rickmanu', get_template_directory() . '/languages');
             // add_theme_support('automatic-feed-links');
-            // add_theme_support('title-tag');
+            add_theme_support('title-tag');
             add_theme_support('post-thumbnails');
         }
 

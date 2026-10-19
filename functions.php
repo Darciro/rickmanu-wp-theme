@@ -10,7 +10,7 @@
 
 if (!defined('RICKMANU_VERSION')) {
     // Replace the version number of the theme on each release.
-    define('RICKMANU_VERSION', '1.0.0');
+    define('RICKMANU_VERSION', '2.0.0');
 }
 
 if (! defined('RICKMANU_SLUG')) {
@@ -19,5 +19,6 @@ if (! defined('RICKMANU_SLUG')) {
 
 require_once get_template_directory() . '/inc/class-theme-setup.php';
 require_once get_template_directory() . '/inc/class-enqueue-scripts.php';
-require_once get_template_directory() . '/inc/class-split-nav-walker.php';
 require_once get_template_directory() . '/inc/class-gallery-lightbox.php';
+require_once get_template_directory() . '/inc/navigation.php';
+require_once get_template_directory() . '/inc/content.php';

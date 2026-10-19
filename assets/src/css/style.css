@@ -1,101 +1,111 @@
 @import "tailwindcss";
-@import "@fortawesome/fontawesome-free/css/all.css";
-@import "swiper/css";
-@import "swiper/css/effect-coverflow";
-@import "swiper/css/navigation";
 @import "@fancyapps/ui/dist/fancybox/fancybox.css";
 @source "../../../**/*.php";
+@source "../js";
 
-body {
-    font-family: "Montserrat", sans-serif;
-    font-size: 16px;
+/* Design tokens from the revamp layout. */
+@theme {
+    --color-ink: #0d0e10;
+    --color-surface: #16181c;
+    --color-line: #23262c;
+    --color-line-strong: #2e3138;
+    --color-edge: #3a3e46;
+    --color-fg: #f2f1ec;
+    --color-fg-soft: #e4e3de;
+    --color-fg-muted: #b9bcc3;
+    --color-fg-subtle: #a3a6ae;
+    --color-fg-faint: #4a4e57;
+    --color-accent: #c8f05a;
+
+    --font-sans: "DM Sans", system-ui, sans-serif;
+    --font-display: "Bricolage Grotesque", "DM Sans", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+    --container-page: 1240px;
 }
 
-.font-feature {
-    font-family: "Cinzel", serif;
-    letter-spacing: 0.08em;
+/* Centered page column shared by header, sections and footer. */
+@utility page-shell {
+    @apply mx-auto w-full max-w-page px-5 sm:px-8;
 }
 
-.font-main-text {
-    font-family: "Montserrat", sans-serif;
-    letter-spacing: 0.25em;
-}
+/* Editor content (the_content) cannot carry utility classes, so style its elements here. */
+@utility entry-content {
+    @apply flex flex-col gap-6 text-fg-muted;
 
-#logo {
-    min-width: 720px;
-}
-
-#main-navigation .menu-item a {
-    color: #C9A06F;
-    font-size: 18px;
-    padding: 1.2rem .6rem;
-    display: inline-block;
-}
-
-.swiper {
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-.swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 650px;
-    height: 400px;
-}
-
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: grayscale(100%);
-    transition: filter 0.4s ease;
-}
-
-.swiper-slide.swiper-slide-active img {
-    filter: grayscale(0%);
-}
-
-.swiper-slide .project-meta {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.swiper-slide.swiper-slide-active .project-meta {
-    opacity: 1;
-}
-
-.projects-swiper-button-prev,
-.projects-swiper-button-next {
-    color: #C9A06F;
-}
-
-#role {
-    flex-grow: 1;
-}
-
-@keyframes blink {
-    from {
-        opacity: 0;
+    & :where(h2, h3, h4) {
+        @apply mt-6 font-display font-semibold tracking-[-0.015em] text-fg;
     }
 
-    to {
-        opacity: 1;
+    & h2 {
+        @apply text-4xl;
+    }
+
+    & h3 {
+        @apply text-[28px];
+    }
+
+    & h4 {
+        @apply text-[22px];
+    }
+
+    & a {
+        @apply text-accent underline underline-offset-4 hover:text-fg;
+    }
+
+    & :where(strong, b) {
+        @apply text-fg-soft;
+    }
+
+    & ul {
+        @apply list-disc pl-6;
+    }
+
+    & ol {
+        @apply list-decimal pl-6;
+    }
+
+    & blockquote {
+        @apply border-l-2 border-accent pl-6 text-xl text-fg-soft;
+    }
+
+    & :where(code, pre) {
+        @apply rounded-md bg-surface font-mono text-[0.9em] text-fg-soft;
+    }
+
+    & code {
+        @apply px-1.5 py-0.5;
+    }
+
+    & pre {
+        @apply overflow-x-auto border border-line p-5;
+    }
+
+    & img {
+        @apply h-auto max-w-full rounded-[18px];
+    }
+
+    & hr {
+        @apply border-line;
+    }
+
+    & table {
+        @apply w-full border-collapse text-left text-base;
+    }
+
+    & :where(th, td) {
+        @apply border-b border-line py-3 pr-4;
     }
 }
 
-.actor__content--typing::after {
-    content: '|';
-    animation: blink 500ms infinite;
+@layer base {
+    :focus-visible {
+        outline: 2px solid var(--color-accent);
+        outline-offset: 3px;
+    }
 }
 
 @media only screen and (max-width: 640px) {
-    #logo {
-        scale: 0.75;
-    }
-
     .f-carousel__toolbar__column.is-right .f-button:not(:last-child),
     .wp-block-gallery.has-nested-images figcaption {
         display: none;
