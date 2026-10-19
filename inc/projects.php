@@ -49,7 +49,7 @@ function rickmanu_project_register_post_type(): void
             'remove_featured_image' => __('Remove project image', 'rickmanu'),
             'use_featured_image'    => __('Use as project image', 'rickmanu'),
         ],
-        'public'        => false,
+        'public'        => true,
         'show_ui'       => true,
         'show_in_rest'  => true,
         'menu_position' => 21,

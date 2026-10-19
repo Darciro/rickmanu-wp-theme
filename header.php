@@ -25,7 +25,7 @@
     <header class="fixed inset-x-0 top-(--wp-admin--admin-bar--height,0px) z-30 h-(--header-height) border-b border-line bg-ink/82 backdrop-blur-[14px]">
         <nav class="page-shell flex h-full items-center justify-between gap-4" aria-label="<?php esc_attr_e('Main', 'rickmanu'); ?>">
             <a href="<?php echo esc_url(rickmanu_home_url()); ?>" class="flex min-h-11 items-center gap-2.5 font-mono text-base font-medium tracking-[-0.01em] transition-colors hover:text-accent">
-                <img src="<?php echo esc_url(get_theme_file_uri('assets/images/logo.png')); ?>" class="size-8" width="520" height="520" alt="" decoding="async" />
+                <img src="<?php echo esc_url(get_theme_file_uri('assets/images/logo.png')); ?>" class="size-12 md:size-8" width="520" height="520" alt="" decoding="async" />
                 <span class="max-[480px]:sr-only">rickmanu.dev</span>
             </a>
 

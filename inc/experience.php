@@ -31,7 +31,7 @@ function rickmanu_experience_register_post_type(): void
             'all_items'             => __('All Experience', 'rickmanu'),
             'enter_title_here'      => __('Company name', 'rickmanu'),
         ],
-        'public'        => false,
+        'public'        => true,
         'show_ui'       => true,
         'show_in_rest'  => true,
         'menu_position' => 20,
