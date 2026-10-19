@@ -17,8 +17,13 @@ if (! defined('RICKMANU_SLUG')) {
     define('RICKMANU_SLUG', 'rickmanu');
 }
 
+require_once get_template_directory() . '/inc/language.php';
 require_once get_template_directory() . '/inc/class-theme-setup.php';
 require_once get_template_directory() . '/inc/class-enqueue-scripts.php';
 require_once get_template_directory() . '/inc/class-gallery-lightbox.php';
 require_once get_template_directory() . '/inc/navigation.php';
+require_once get_template_directory() . '/inc/meta-fields.php';
+require_once get_template_directory() . '/inc/experience.php';
+require_once get_template_directory() . '/inc/projects.php';
+require_once get_template_directory() . '/inc/linkedin-import.php';
 require_once get_template_directory() . '/inc/content.php';

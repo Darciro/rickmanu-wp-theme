@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Static portfolio content rendered by the front page template parts.
+ * Portfolio content rendered by the front page template parts.
  *
  * @package rickmanu
  */
@@ -11,70 +11,31 @@ if (! defined('ABSPATH')) {
 }
 
 /**
- * Career history, most recent first.
+ * Career history from the Experience post type (inc/experience.php),
+ * ordered by the "Order" attribute in the editor, most recent first.
  *
  * @return array<int, array{period: string, company: string, group: string, role: string, summary: string, current: bool}>
  */
 function rickmanu_get_experience(): array
 {
-    return [
-        [
-            'period'  => __('Oct 2025 — Current', 'rickmanu'),
-            'company' => 'Merkle',
-            'group'   => __('(Dentsu Group)', 'rickmanu'),
-            'role'    => __('Smart Integrations Engineer', 'rickmanu'),
-            'summary' => __('Tailor-made solutions for international clients, focused on web applications and system integrations through APIs and web services, within a multidisciplinary team distributed across Europe and Central Asia.', 'rickmanu'),
-            'current' => true,
+    $posts = get_posts([
+        'post_type'      => RICKMANU_EXPERIENCE_POST_TYPE,
+        'posts_per_page' => -1,
+        'orderby'        => ['menu_order' => 'ASC', 'date' => 'DESC'],
+        'no_found_rows'  => true,
+    ]);
+
+    return array_map(
+        static fn(WP_Post $post): array => [
+            'period'  => (string) get_post_meta($post->ID, 'period', true),
+            'company' => $post->post_title,
+            'group'   => (string) get_post_meta($post->ID, 'group', true),
+            'role'    => (string) get_post_meta($post->ID, 'role', true),
+            'summary' => (string) get_post_meta($post->ID, 'summary', true),
+            'current' => (bool) get_post_meta($post->ID, 'current', true),
         ],
-        [
-            'period'  => __('Sep 2024 — Sep 2025', 'rickmanu'),
-            'company' => 'Doutor Finanças',
-            'group'   => '',
-            'role'    => __('Software Engineer / Scrum Master', 'rickmanu'),
-            'summary' => __('Full-stack development with PHP (Laravel) and WordPress, building dynamic Gutenberg blocks in JavaScript. As Scrum Master, facilitated agile ceremonies and managed backlogs for news portals, hotsites and landing pages.', 'rickmanu'),
-            'current' => false,
-        ],
-        [
-            'period'  => __('Oct 2019 — Sep 2024', 'rickmanu'),
-            'company' => 'Integer Consulting',
-            'group'   => '',
-            'role'    => __('Innovation Center Manager / Project Manager & Tech Leader', 'rickmanu'),
-            'summary' => __('Started as an external consultant in Germany (PHP/Laravel, React), then progressed internally to Tech Lead, Scrum Master and Project Manager — leading teams on CRM, logistics and web projects across multiple industries.', 'rickmanu'),
-            'current' => false,
-        ],
-        [
-            'period'  => __('Oct 2017 — Oct 2019', 'rickmanu'),
-            'company' => 'Hepta Tecnologia e Informática',
-            'group'   => '',
-            'role'    => __('Software Engineer', 'rickmanu'),
-            'summary' => __('Worked directly for the Ministry of Culture: WordPress/Joomla websites, Laravel systems and legacy maintenance. Technical lead on the migration and update of legacy systems.', 'rickmanu'),
-            'current' => false,
-        ],
-        [
-            'period'  => __('Apr 2015 — Oct 2017', 'rickmanu'),
-            'company' => 'Talk2',
-            'group'   => '',
-            'role'    => __('Software Developer', 'rickmanu'),
-            'summary' => __('PHP systems across several frameworks, web and hybrid mobile apps with React/React Native and Angular, and front-end solutions for multiple industries.', 'rickmanu'),
-            'current' => false,
-        ],
-        [
-            'period'  => __('Oct 2014 — Apr 2015', 'rickmanu'),
-            'company' => 'Basis Tecnologia da Informação S.A.',
-            'group'   => '',
-            'role'    => __('Software Developer', 'rickmanu'),
-            'summary' => __('Maintained PHP web systems for the Ministry of Defence and built APIs to connect to web services.', 'rickmanu'),
-            'current' => false,
-        ],
-        [
-            'period'  => __('Aug 2012 — Jun 2014', 'rickmanu'),
-            'company' => 'Cast Informática S.A.',
-            'group'   => '',
-            'role'    => __('Software Developer', 'rickmanu'),
-            'summary' => __('PHP web systems with HTML5, CSS3 (Bootstrap, Semantic UI) and JavaScript (Ajax, Vanilla, jQuery); MySQL/PostgreSQL databases; WordPress/Drupal themes and plugins.', 'rickmanu'),
-            'current' => false,
-        ],
-    ];
+        $posts
+    );
 }
 
 /**
@@ -144,60 +105,42 @@ function rickmanu_get_soft_skills(): array
 }
 
 /**
- * Selected projects. Images live in assets/images/projects/.
+ * Selected projects from the Project post type (inc/projects.php), ordered by
+ * the "Order" attribute in the editor. The image is the featured image URL and
+ * is empty when none is set.
  *
- * @return array<int, array{title: string, type: string, image: string, url: string}>
+ * Optional fields (year, description, stack, github) are only shown in the
+ * project dialog when they are not empty.
+ *
+ * @return array<int, array{title: string, type: string, image: string, url: string, year: string, description: string, stack: string[], github: string}>
  */
 function rickmanu_get_projects(): array
 {
-    return [
-        [
-            'title' => 'Mined Underwater',
-            'type'  => __('Game', 'rickmanu'),
-            'image' => 'mined-underwater.png',
-            'url'   => 'https://play.google.com/store/apps/details?id=com.galdartech.minedunderwater',
-        ],
-        [
-            'title' => 'WordPress Meetup',
-            'type'  => __('Web', 'rickmanu'),
-            'image' => 'wp-meetup.png',
-            'url'   => 'https://www.meetup.com/pt-br/wordpress-brasilia/',
-        ],
-        [
-            'title' => 'Monitor de Sustentabilidade',
-            'type'  => __('Web', 'rickmanu'),
-            'image' => 'monitor-sustentabilidade.png',
-            'url'   => 'https://monitor.gppesalq.agr.br/',
-        ],
-        [
-            'title' => 'Portas abertas para direitos',
-            'type'  => __('Web', 'rickmanu'),
-            'image' => 'portas-abertas.png',
-            'url'   => 'https://portasabertasparadireitos.com.br/',
-        ],
-        [
-            'title' => 'O Mediador',
-            'type'  => __('Web', 'rickmanu'),
-            'image' => 'mediador.png',
-            'url'   => 'https://omediador.pt/',
-        ],
-        [
-            'title' => 'Geografia da fome',
-            'type'  => __('Web', 'rickmanu'),
-            'image' => 'geografia-da-fome.png',
-            'url'   => 'https://geografiadafome.fsp.usp.br/',
-        ],
-        [
-            'title' => 'Que estado queremos',
-            'type'  => __('Web', 'rickmanu'),
-            'image' => 'que-estado-queremos.png',
-            'url'   => 'https://queestadoqueremos.org/',
-        ],
-        [
-            'title' => 'Prêmio Profissionais da Música',
-            'type'  => __('Web', 'rickmanu'),
-            'image' => 'ppm.png',
-            'url'   => 'https://ppm.art.br',
-        ],
-    ];
+    $posts = get_posts([
+        'post_type'      => RICKMANU_PROJECT_POST_TYPE,
+        'posts_per_page' => -1,
+        'orderby'        => ['menu_order' => 'ASC', 'date' => 'DESC'],
+        'no_found_rows'  => true,
+    ]);
+
+    $types = rickmanu_get_project_types();
+
+    return array_map(
+        static function (WP_Post $post) use ($types): array {
+            $type  = (string) get_post_meta($post->ID, 'type', true);
+            $stack = array_filter(array_map('trim', explode(',', (string) get_post_meta($post->ID, 'stack', true))));
+
+            return [
+                'title'       => $post->post_title,
+                'type'        => $types[$type] ?? '',
+                'image'       => (string) get_the_post_thumbnail_url($post, 'large'),
+                'url'         => (string) get_post_meta($post->ID, 'url', true),
+                'year'        => (string) get_post_meta($post->ID, 'year', true),
+                'description' => (string) get_post_meta($post->ID, 'description', true),
+                'stack'       => array_values($stack),
+                'github'      => (string) get_post_meta($post->ID, 'github', true),
+            ];
+        },
+        $posts
+    );
 }

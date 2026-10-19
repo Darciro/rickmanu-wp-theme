@@ -8,7 +8,7 @@
 
 ?>
 <section id="top" class="page-shell grid grid-cols-1 items-center gap-14 pt-24 pb-20 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:grid-cols-[minmax(0,1fr)_380px] md:gap-10 lg:gap-14">
-    <div class="flex min-w-0 flex-col gap-7">
+    <div id="intro" class="flex min-w-0 flex-col gap-7">
         <p class="flex flex-wrap items-center gap-2.5 font-mono text-sm text-fg-subtle">
             <span class="inline-block size-2 rounded-full bg-accent" aria-hidden="true"></span>
             <span class="text-accent" aria-hidden="true">&lt;<span id="role">developer</span>/&gt;</span>

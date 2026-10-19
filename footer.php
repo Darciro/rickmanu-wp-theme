@@ -1,6 +1,6 @@
 <?php get_template_part('template-parts/contact'); ?>
 
-<footer class="border-t border-line">
+<footer class="border-t border-line max-[820px]:pb-23">
     <div class="page-shell flex flex-wrap justify-between gap-3 py-7 text-sm text-fg-subtle">
         <p>
             <?php

@@ -6,6 +6,12 @@
  * @package rickmanu
  */
 
+$rickmanu_jobs = rickmanu_get_experience();
+
+if (! $rickmanu_jobs) {
+    return;
+}
+
 ?>
 <section id="experience" class="page-shell flex flex-col gap-12 pt-30 pb-10" aria-labelledby="experience-title">
     <?php
@@ -18,7 +24,7 @@
     ?>
 
     <ol class="flex flex-col border-t border-line">
-        <?php foreach (rickmanu_get_experience() as $rickmanu_job) : ?>
+        <?php foreach ($rickmanu_jobs as $rickmanu_job) : ?>
             <li class="flex flex-wrap gap-x-10 gap-y-3 border-b border-line py-8">
                 <p class="flex-[1_1_200px] pt-1.5 font-mono text-sm <?php echo $rickmanu_job['current'] ? 'text-accent' : 'text-fg-subtle'; ?>">
                     <?php echo esc_html($rickmanu_job['period']); ?>

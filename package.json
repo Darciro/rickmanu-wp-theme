@@ -8,6 +8,7 @@
     "build:js": "esbuild assets/src/js/main.js --bundle --outfile=assets/dist/js/main.js --minify",
     "copy:fonts": "cp -r node_modules/@fortawesome/fontawesome-free/webfonts assets/dist/webfonts",
     "build": "npm run build:css && npm run build:js && npm run copy:fonts",
+    "zip": "npm run build && node scripts/zip.mjs",
     "watch:css": "postcss assets/src/css/style.css -o assets/dist/css/style.css --watch",
     "watch:js": "esbuild assets/src/js/main.js --bundle --outfile=assets/dist/js/main.js --watch",
     "watch": "npm run copy:fonts && npm run watch:css & npm run watch:js"
@@ -19,6 +20,7 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4.2.1",
     "autoprefixer": "^10.4.27",
+    "archiver": "^8.0.0",
     "esbuild": "^0.28.0",
     "postcss": "^8.5.8",
     "postcss-cli": "^11.0.1",

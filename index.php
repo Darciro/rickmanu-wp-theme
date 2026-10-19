@@ -46,7 +46,7 @@
     <?php else : ?>
         <p class="text-fg-muted">
             <?php esc_html_e('Nothing here yet.', 'rickmanu'); ?>
-            <a class="text-accent underline underline-offset-4 hover:text-fg" href="<?php echo esc_url(home_url('/')); ?>"><?php esc_html_e('Back to the home page →', 'rickmanu'); ?></a>
+            <a class="text-accent underline underline-offset-4 hover:text-fg" href="<?php echo esc_url(rickmanu_home_url()); ?>"><?php esc_html_e('Back to the home page →', 'rickmanu'); ?></a>
         </p>
     <?php endif; ?>
 </main>
