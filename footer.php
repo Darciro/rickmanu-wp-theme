@@ -5,10 +5,10 @@
         <p>
             <?php
             /* translators: %s: current year. */
-            printf(esc_html__('© %s Rick Manu. All rights reserved.', 'rickmanu'), esc_html(wp_date('Y')));
+            printf(esc_html__('© %s Ricardo Carvalho (Rick Manu). All rights reserved.', 'rickmanu'), esc_html(wp_date('Y')));
             ?>
         </p>
-        <p class="font-mono">&lt;developer/&gt; · <?php esc_html_e('fullstack since 2011', 'rickmanu'); ?></p>
+        <p class="font-mono">&lt;developer/&gt; · <?php esc_html_e('senior software engineer', 'rickmanu'); ?></p>
     </div>
 </footer>
 

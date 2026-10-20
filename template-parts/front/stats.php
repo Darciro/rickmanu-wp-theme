@@ -8,7 +8,7 @@
 
 $rickmanu_stats = [
     [
-        'value' => '2011',
+        'value' => rickmanu_get_career_start_year(),
         'label' => __('Building software since', 'rickmanu'),
     ],
     [
@@ -24,6 +24,9 @@ $rickmanu_stats = [
         'label' => __('Teams across Brazil, Europe & Central Asia', 'rickmanu'),
     ],
 ];
+
+// Skip stats that have no value yet, e.g. no career history entered.
+$rickmanu_stats = array_filter($rickmanu_stats, static fn(array $stat): bool => '' !== $stat['value'] && '0' !== $stat['value']);
 ?>
 <section class="border-y border-line" aria-label="<?php esc_attr_e('Highlights', 'rickmanu'); ?>">
     <dl class="page-shell grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))]">

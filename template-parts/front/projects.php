@@ -19,6 +19,12 @@ $rickmanu_dialog_data = array_map(
         'type'        => $project['type'],
         'year'        => $project['year'],
         'description' => $project['description'],
+        'case'        => array_filter([
+            'context'      => $project['context'],
+            'contribution' => $project['contribution'],
+            'challenges'   => $project['challenges'],
+            'results'      => $project['results'],
+        ]),
         'stack'       => $project['stack'],
         'url'         => esc_url_raw($project['url']),
         'github'      => esc_url_raw($project['github']),
@@ -32,7 +38,7 @@ $rickmanu_arrow_icon = '<svg class="size-4" viewBox="0 0 24 24" fill="none" stro
 <section id="projects" class="page-shell flex flex-col gap-12 pt-30 pb-10" aria-labelledby="projects-title">
     <?php
     get_template_part('template-parts/section-heading', null, [
-        'eyebrow' => __('04 / ls ./projects', 'rickmanu'),
+        'eyebrow' => __('05 / ls ./projects', 'rickmanu'),
         'title'   => __('Selected projects', 'rickmanu'),
         'id'      => 'projects-title',
         'meta'    => '<span class="text-[15px] text-fg-subtle">' . esc_html(
@@ -111,6 +117,23 @@ $rickmanu_arrow_icon = '<svg class="size-4" viewBox="0 0 24 24" fill="none" stro
                 <h3 id="project-dialog-title" class="font-display text-[clamp(32px,5vw,48px)] leading-[1.02] font-extrabold tracking-[-0.03em]" data-project-field="title"></h3>
                 <p class="max-w-170 text-fg-muted" data-project-field="description"></p>
 
+                <?php
+                $rickmanu_case_labels = [
+                    'context'      => __('Context', 'rickmanu'),
+                    'contribution' => __('My contribution', 'rickmanu'),
+                    'challenges'   => __('Technical challenges', 'rickmanu'),
+                    'results'      => __('Results', 'rickmanu'),
+                ];
+                ?>
+                <dl class="grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] gap-x-7 gap-y-5" data-project-field="case">
+                    <?php foreach ($rickmanu_case_labels as $rickmanu_case_key => $rickmanu_case_label) : ?>
+                        <div class="flex flex-col gap-1.5" data-project-case="<?php echo esc_attr($rickmanu_case_key); ?>">
+                            <dt class="font-mono text-xs text-accent"><?php echo esc_html($rickmanu_case_label); ?></dt>
+                            <dd class="text-base whitespace-pre-line text-fg-muted"></dd>
+                        </div>
+                    <?php endforeach; ?>
+                </dl>
+
                 <div class="flex flex-col gap-2.5" data-project-field="stack-wrap">
                     <span class="font-mono text-xs text-fg-subtle" id="project-dialog-stack"><?php esc_html_e('Stack', 'rickmanu'); ?></span>
                     <ul class="flex flex-wrap gap-2" aria-labelledby="project-dialog-stack" data-project-field="stack"></ul>
@@ -131,7 +154,7 @@ $rickmanu_arrow_icon = '<svg class="size-4" viewBox="0 0 24 24" fill="none" stro
                     </a>
                 </div>
 
-                <div class="flex justify-between gap-3 border-t border-line pt-5">
+                <div class="hidden justify-between gap-3 border-t border-line pt-5">
                     <button type="button" class="inline-flex min-h-11 min-w-0 cursor-pointer items-center gap-2 rounded-xl border border-line-strong px-3.5 text-sm text-fg-soft transition-colors hover:border-accent" data-project-step="-1">
                         <svg class="size-4 flex-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                             <path d="M19 12H5"></path>

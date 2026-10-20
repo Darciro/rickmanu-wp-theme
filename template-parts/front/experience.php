@@ -6,7 +6,8 @@
  * @package rickmanu
  */
 
-$rickmanu_jobs = rickmanu_get_experience();
+$rickmanu_jobs  = rickmanu_get_experience();
+$rickmanu_since = rickmanu_get_career_start_year();
 
 if (! $rickmanu_jobs) {
     return;
@@ -19,7 +20,13 @@ if (! $rickmanu_jobs) {
         'eyebrow' => __('02 / git log --career', 'rickmanu'),
         'title'   => __('Experience', 'rickmanu'),
         'id'      => 'experience-title',
-        'meta'    => '<span class="text-[15px] text-fg-subtle">' . esc_html__('2012 — today', 'rickmanu') . '</span>',
+        'meta'    => $rickmanu_since ? '<span class="text-[15px] text-fg-subtle">' . esc_html(
+            sprintf(
+                /* translators: %s: year the career started. */
+                __('%s — today', 'rickmanu'),
+                $rickmanu_since
+            )
+        ) . '</span>' : '',
     ]);
     ?>
 

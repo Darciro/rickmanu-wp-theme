@@ -45,6 +45,7 @@ function rickmanu_main_menu_fallback(array $args): void
         'about'      => __('About', 'rickmanu'),
         'experience' => __('Experience', 'rickmanu'),
         'skills'     => __('Skills', 'rickmanu'),
+        'services'   => __('Services', 'rickmanu'),
         'projects'   => __('Projects', 'rickmanu'),
     ];
 

@@ -39,6 +39,7 @@ export default function initProjectDialog(smoother) {
         meta: field("meta"),
         title: field("title"),
         description: field("description"),
+        caseWrap: field("case"),
         stackWrap: field("stack-wrap"),
         stack: field("stack"),
         url: field("url"),
@@ -59,6 +60,18 @@ export default function initProjectDialog(smoother) {
 
         fields.description.textContent = project.description;
         fields.description.hidden = !project.description;
+
+        // Case study entries (context, contribution...) are shown only when filled in.
+        let hasCase = false;
+        fields.caseWrap?.querySelectorAll("[data-project-case]").forEach((entry) => {
+            const text = project.case?.[entry.dataset.projectCase] ?? "";
+            entry.querySelector("dd").textContent = text;
+            entry.hidden = !text;
+            hasCase ||= Boolean(text);
+        });
+        if (fields.caseWrap) {
+            fields.caseWrap.hidden = !hasCase;
+        }
 
         fields.stack.replaceChildren(
             ...project.stack.map((name) => {

@@ -29,10 +29,13 @@ $rickmanu_about_cards = [
 
     <div class="flex min-w-0 flex-[999_1_560px] flex-col gap-8">
         <p class="text-2xl leading-normal tracking-[-0.005em] text-fg-soft">
-            <?php esc_html_e("I'm a software developer who began my career in 2011 as an engineer and have since specialized as a fullstack developer with strong expertise in PHP, C#, React, React Native, and Angular.", 'rickmanu'); ?>
+            <?php esc_html_e("I'm a software engineer with more than a decade of experience building web applications, integrations and enterprise solutions. Along the way I've worked as a developer, Tech Lead, Scrum Master and team manager, on projects across different industries and international teams.", 'rickmanu'); ?>
         </p>
         <p class="text-fg-muted">
-            <?php esc_html_e('I have designed and implemented scalable web and mobile applications, built robust back-end architectures, and crafted intuitive front-end experiences. My work spans projects such as internal CRM systems (including commercial modules and invoicing), commercial and logistics solutions for the food industry, and web platforms for the property and training sectors.', 'rickmanu'); ?>
+            <?php esc_html_e('My work combines full stack development, software architecture and technical leadership. I mostly work with PHP, Laravel, WordPress, JavaScript, TypeScript and React, plus APIs, system integrations and modernization of existing applications.', 'rickmanu'); ?>
+        </p>
+        <p class="text-fg-muted">
+            <?php esc_html_e('I believe good technical solutions consider not only code and architecture, but also maintenance, collaboration between teams and business goals — and I look for projects that value engineering quality, well-founded technical decisions and continuous improvement.', 'rickmanu'); ?>
         </p>
 
         <div class="grid grid-cols-[repeat(auto-fit,minmax(min(260px,100%),1fr))] gap-4">

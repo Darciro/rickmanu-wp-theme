@@ -2,14 +2,14 @@
 # This file is distributed under the GPL2.
 msgid ""
 msgstr ""
-"Project-Id-Version: Rick Manu 3.0.0\n"
+"Project-Id-Version: Rick Manu 3.3.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/rickmanu\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-19T20:13:02+00:00\n"
+"POT-Creation-Date: 2026-10-20T13:34:21+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: rickmanu\n"
@@ -34,11 +34,11 @@ msgstr ""
 #. translators: %s: current year.
 #: footer.php:8
 #, php-format
-msgid "© %s Rick Manu. All rights reserved."
+msgid "© %s Ricardo Carvalho (Rick Manu). All rights reserved."
 msgstr ""
 
 #: footer.php:11
-msgid "fullstack since 2011"
+msgid "senior software engineer"
 msgstr ""
 
 #: header.php:22
@@ -53,70 +53,117 @@ msgstr ""
 msgid "Let's talk"
 msgstr ""
 
-#: inc/class-theme-setup.php:24
+#: inc/class-theme-setup.php:44
+msgid "Senior Software Engineer, Full Stack & Tech Lead"
+msgstr ""
+
+#: inc/class-theme-setup.php:53
 msgid "Main menu"
 msgstr ""
 
-#: inc/content.php:51
-msgid "Back-end"
-msgstr ""
-
-#: inc/content.php:57
-msgid "Front-end"
-msgstr ""
-
-#: inc/content.php:63
-msgid "Mobile & games"
-msgstr ""
-
-#: inc/content.php:69
-msgid "APIs & CMS"
-msgstr ""
-
-#: inc/content.php:75
-msgid "Data"
-msgstr ""
-
-#: inc/content.php:81
-msgid "Quality & DevOps"
-msgstr ""
-
-#: inc/content.php:96
-msgid "Technical Leadership"
-msgstr ""
-
-#: inc/content.php:97
-msgid "Multidisciplinary Team Management"
-msgstr ""
-
-#: inc/content.php:98
-msgid "Project Management"
-msgstr ""
-
-#: inc/content.php:99
-msgid "Backlog Management"
-msgstr ""
-
 #: inc/content.php:100
-msgid "Decision Making"
+msgid "Web application development"
 msgstr ""
 
 #: inc/content.php:101
+msgid "Building and evolving applications, digital platforms and enterprise systems, with attention to architecture, integrations and maintainability."
+msgstr ""
+
+#: inc/content.php:105
+msgid "System modernization"
+msgstr ""
+
+#: inc/content.php:106
+msgid "Evolving legacy systems, reviewing existing structures and implementing technical improvements that support growth and easier maintenance."
+msgstr ""
+
+#: inc/content.php:110
+#: template-parts/front/hero.php:15
+msgid "APIs & integrations"
+msgstr ""
+
+#: inc/content.php:111
+msgid "Designing and integrating services that connect systems, automate workflows and make data flow between platforms."
+msgstr ""
+
+#: inc/content.php:115
+msgid "Tech leadership & support"
+msgstr ""
+
+#: inc/content.php:116
+msgid "Supporting development teams with architecture decisions, ways of working, engineering best practices and better delivery processes."
+msgstr ""
+
+#. translators: E-mail subject used by the "Talk about a project" links.
+#: inc/content.php:132
+msgid "Project inquiry — rickmanu.dev"
+msgstr ""
+
+#. translators: E-mail subject used by the "Discuss an opportunity" links.
+#: inc/content.php:134
+msgid "Job opportunity — rickmanu.dev"
+msgstr ""
+
+#: inc/content.php:156
+msgid "Back-end"
+msgstr ""
+
+#: inc/content.php:162
+msgid "Front-end"
+msgstr ""
+
+#: inc/content.php:168
+msgid "Mobile & games"
+msgstr ""
+
+#: inc/content.php:174
+msgid "APIs & CMS"
+msgstr ""
+
+#: inc/content.php:180
+msgid "Data"
+msgstr ""
+
+#: inc/content.php:186
+msgid "Quality & DevOps"
+msgstr ""
+
+#: inc/content.php:201
+msgid "Technical Leadership"
+msgstr ""
+
+#: inc/content.php:202
+msgid "Multidisciplinary Team Management"
+msgstr ""
+
+#: inc/content.php:203
+msgid "Project Management"
+msgstr ""
+
+#: inc/content.php:204
+msgid "Backlog Management"
+msgstr ""
+
+#: inc/content.php:205
+msgid "Decision Making"
+msgstr ""
+
+#: inc/content.php:206
 msgid "Technical Mentoring"
 msgstr ""
 
-#: inc/content.php:102
+#: inc/content.php:207
 msgid "Scrum & Agile"
 msgstr ""
 
-#: inc/content.php:103
+#: inc/content.php:208
 msgid "Continuous Improvement"
 msgstr ""
 
 #: inc/experience.php:22
 #: inc/experience.php:23
 #: inc/navigation.php:46
-#: template-parts/front/experience.php:20
+#: template-parts/front/experience.php:21
 msgid "Experience"
 msgstr ""
 
@@ -238,26 +285,30 @@ msgid "Could not read your positions from LinkedIn. See the debug log for detail
 msgstr ""
 
 #: inc/navigation.php:45
-#: inc/navigation.php:84
+#: inc/navigation.php:85
 msgid "About"
 msgstr ""
 
 #: inc/navigation.php:47
-#: inc/navigation.php:92
+#: inc/navigation.php:93
 msgid "Skills"
 msgstr ""
 
 #: inc/navigation.php:48
-#: inc/navigation.php:96
+msgid "Services"
+msgstr ""
+
+#: inc/navigation.php:49
+#: inc/navigation.php:97
 #: inc/projects.php:36
 msgid "Projects"
 msgstr ""
 
-#: inc/navigation.php:88
+#: inc/navigation.php:89
 msgid "Work"
 msgstr ""
 
-#: inc/navigation.php:100
+#: inc/navigation.php:101
 msgid "Contact"
 msgstr ""
 
@@ -354,19 +405,55 @@ msgid "Optional. Shown in the project details dialog."
 msgstr ""
 
 #: inc/projects.php:96
-#: template-parts/front/projects.php:114
-msgid "Stack"
+#: template-parts/front/projects.php:122
+msgid "Context"
 msgstr ""
 
 #: inc/projects.php:98
+msgid "Optional case study. What need motivated the project?"
+msgstr ""
+
+#: inc/projects.php:102
+#: template-parts/front/projects.php:123
+msgid "My contribution"
+msgstr ""
+
+#: inc/projects.php:104
+msgid "Optional case study. Features, integrations or architecture decisions you owned."
+msgstr ""
+
+#: inc/projects.php:108
+#: template-parts/front/projects.php:124
+msgid "Technical challenges"
+msgstr ""
+
+#: inc/projects.php:110
+msgid "Optional case study. Implementation, architecture or integration problems solved."
+msgstr ""
+
+#: inc/projects.php:114
+#: template-parts/front/projects.php:125
+msgid "Results"
+msgstr ""
+
+#: inc/projects.php:116
+msgid "Optional case study. What the solution enabled; only verifiable outcomes."
+msgstr ""
+
+#: inc/projects.php:120
+#: template-parts/front/projects.php:138
+msgid "Stack"
+msgstr ""
+
+#: inc/projects.php:122
 msgid "Optional. Technologies separated by commas, e.g. \"PHP, WordPress, React\"."
 msgstr ""
 
-#: inc/projects.php:101
+#: inc/projects.php:125
 msgid "GitHub URL"
 msgstr ""
 
-#: inc/projects.php:103
+#: inc/projects.php:127
 msgid "Optional. Link to the source code."
 msgstr ""
 
@@ -400,12 +487,37 @@ msgstr ""
 msgid "Back to the home page →"
 msgstr ""
 
-#: template-parts/contact.php:24
-msgid "05 / ./contact.sh"
+#: template-parts/contact.php:14
+msgid "// for companies & clients"
 msgstr ""
 
-#: template-parts/contact.php:26
-msgid "Have a project in mind? Let's build it."
+#: template-parts/contact.php:15
+msgid "Need to build an application, modernize existing systems or integrate platforms? Let's talk about the technical challenges and how we could work together."
+msgstr ""
+
+#: template-parts/contact.php:16
+#: template-parts/front/services.php:25
+msgid "Talk about a project"
+msgstr ""
+
+#: template-parts/contact.php:20
+msgid "// for recruiters & hiring managers"
+msgstr ""
+
+#: template-parts/contact.php:21
+msgid "I'm also open to opportunities in software engineering, architecture and technical leadership — Senior Software Engineer, Senior Full Stack or Tech Lead roles."
+msgstr ""
+
+#: template-parts/contact.php:22
+msgid "Discuss an opportunity"
+msgstr ""
+
+#: template-parts/contact.php:42
+msgid "06 / ./contact.sh"
+msgstr ""
+
+#: template-parts/contact.php:44
+msgid "Let's talk?"
 msgstr ""
 
 #: template-parts/front/about.php:11
@@ -433,97 +545,125 @@ msgid "About me"
 msgstr ""
 
 #: template-parts/front/about.php:32
-msgid "I'm a software developer who began my career in 2011 as an engineer and have since specialized as a fullstack developer with strong expertise in PHP, C#, React, React Native, and Angular."
+msgid "I'm a software engineer with more than a decade of experience building web applications, integrations and enterprise solutions. Along the way I've worked as a developer, Tech Lead, Scrum Master and team manager, on projects across different industries and international teams."
 msgstr ""
 
 #: template-parts/front/about.php:35
-msgid "I have designed and implemented scalable web and mobile applications, built robust back-end architectures, and crafted intuitive front-end experiences. My work spans projects such as internal CRM systems (including commercial modules and invoicing), commercial and logistics solutions for the food industry, and web platforms for the property and training sectors."
+msgid "My work combines full stack development, software architecture and technical leadership. I mostly work with PHP, Laravel, WordPress, JavaScript, TypeScript and React, plus APIs, system integrations and modernization of existing applications."
 msgstr ""
 
-#: template-parts/front/experience.php:19
+#: template-parts/front/about.php:38
+msgid "I believe good technical solutions consider not only code and architecture, but also maintenance, collaboration between teams and business goals — and I look for projects that value engineering quality, well-founded technical decisions and continuous improvement."
+msgstr ""
+
+#: template-parts/front/experience.php:20
 msgid "02 / git log --career"
 msgstr ""
 
-#: template-parts/front/experience.php:22
-msgid "2012 — today"
-msgstr ""
-
-#: template-parts/front/hero.php:15
-msgid "Developer"
+#. translators: %s: year the career started.
+#: template-parts/front/experience.php:26
+#, php-format
+msgid "%s — today"
 msgstr ""
 
 #: template-parts/front/hero.php:16
-msgid "· fullstack · since 2011"
+msgid "Tech leadership"
 msgstr ""
 
-#: template-parts/front/hero.php:20
-msgid "Ricardo Carvalho builds web & mobile products,"
-msgstr ""
-
-#: template-parts/front/hero.php:21
-msgid "end to end."
+#: template-parts/front/hero.php:24
+msgid "Developer"
 msgstr ""
 
 #: template-parts/front/hero.php:25
-msgid "Fullstack developer with deep roots in PHP, C#, React, React Native and Angular — designing scalable apps, robust back-ends and intuitive front-ends for teams across Brazil and Europe."
+msgid "· senior software engineer · BR / EU"
 msgstr ""
 
-#: template-parts/front/hero.php:30
-msgid "View projects"
+#: template-parts/front/hero.php:31
+msgid "Senior Software Engineer · Full Stack · Architecture · Tech Leadership"
 msgstr ""
 
-#: template-parts/front/hero.php:49
-msgid "Portrait of Ricardo Carvalho"
+#: template-parts/front/hero.php:36
+msgid "I build digital products, modernize systems and help teams turn business needs into sustainable software — with more than a decade of experience in development, architecture and technical leadership across Brazil and Europe."
 msgstr ""
 
-#: template-parts/front/hero.php:56
-msgid "Currently"
+#: template-parts/front/hero.php:40
+msgid "core →"
+msgstr ""
+
+#: template-parts/front/hero.php:50
+msgid "See my projects"
 msgstr ""
 
 #: template-parts/front/hero.php:57
-msgid "Smart Integrations Engineer @ Merkle (Dentsu Group)"
+msgid "Get in touch"
 msgstr ""
 
-#: template-parts/front/projects.php:35
-msgid "04 / ls ./projects"
+#: template-parts/front/hero.php:69
+msgid "Portrait of Ricardo Carvalho"
 msgstr ""
 
-#: template-parts/front/projects.php:36
+#: template-parts/front/hero.php:77
+msgid "Currently"
+msgstr ""
+
+#. translators: 1: job title, 2: company name.
+#: template-parts/front/hero.php:81
+#, php-format
+msgid "%1$s @ %2$s"
+msgstr ""
+
+#: template-parts/front/projects.php:41
+msgid "05 / ls ./projects"
+msgstr ""
+
+#: template-parts/front/projects.php:42
 msgid "Selected projects"
 msgstr ""
 
 #. translators: %d: number of projects.
-#: template-parts/front/projects.php:41
+#: template-parts/front/projects.php:47
 #, php-format
 msgid "%d project · click one for details"
 msgid_plural "%d projects · click one for details"
 msgstr[0] ""
 msgstr[1] ""
 
-#: template-parts/front/projects.php:76
-#: template-parts/front/projects.php:122
-#: template-parts/front/projects.php:129
+#: template-parts/front/projects.php:82
+#: template-parts/front/projects.php:146
+#: template-parts/front/projects.php:153
 msgid "(opens in a new tab)"
 msgstr ""
 
-#: template-parts/front/projects.php:96
+#: template-parts/front/projects.php:103
 msgid "Close project details"
 msgstr ""
 
-#: template-parts/front/projects.php:120
+#: template-parts/front/projects.php:144
 msgid "View live project"
 msgstr ""
 
-#: template-parts/front/projects.php:128
+#: template-parts/front/projects.php:152
 msgid "Source on GitHub"
 msgstr ""
 
-#: template-parts/front/projects.php:139
+#: template-parts/front/projects.php:163
 msgid "Previous project:"
 msgstr ""
 
-#: template-parts/front/projects.php:143
+#: template-parts/front/projects.php:167
 msgid "Next project:"
+msgstr ""
+
+#: template-parts/front/services.php:15
+msgid "04 / ./help --list"
+msgstr ""
+
+#: template-parts/front/services.php:17
+msgid "How I can help"
+msgstr ""
+
+#: template-parts/front/services.php:20
+msgid "For companies and teams that need to build, evolve or connect software — and for teams that need an experienced technical hand."
 msgstr ""
 
 #. translators: 1: number of matching technologies, 2: number of technologies listed.
@@ -616,7 +756,7 @@ msgstr ""
 msgid "Teams across Brazil, Europe & Central Asia"
 msgstr ""
 
-#: template-parts/front/stats.php:28
+#: template-parts/front/stats.php:31
 msgid "Highlights"
 msgstr ""
 

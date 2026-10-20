@@ -68,36 +68,60 @@ add_action('init', 'rickmanu_project_register_post_type');
 function rickmanu_project_register_fields(): void
 {
     rickmanu_register_meta_fields(RICKMANU_PROJECT_POST_TYPE, __('Project details', 'rickmanu'), [
-        'type'        => [
+        'type'         => [
             'label'    => __('Type', 'rickmanu'),
             'type'     => 'select',
             'required' => true,
             'choices'  => rickmanu_get_project_types(),
             'default'  => 'web',
         ],
-        'url'         => [
+        'url'          => [
             'label'    => __('Project URL', 'rickmanu'),
             'type'     => 'url',
             'required' => true,
         ],
-        'year'        => [
+        'year'         => [
             'label'       => __('Year', 'rickmanu'),
             'type'        => 'text',
             'description' => __('Optional.', 'rickmanu'),
             'placeholder' => gmdate('Y'),
         ],
-        'description' => [
+        'description'  => [
             'label'       => __('Description', 'rickmanu'),
             'type'        => 'textarea',
             'description' => __('Optional. Shown in the project details dialog.', 'rickmanu'),
             'rows'        => 4,
         ],
-        'stack'       => [
+        'context'      => [
+            'label'       => __('Context', 'rickmanu'),
+            'type'        => 'textarea',
+            'description' => __('Optional case study. What need motivated the project?', 'rickmanu'),
+            'rows'        => 3,
+        ],
+        'contribution' => [
+            'label'       => __('My contribution', 'rickmanu'),
+            'type'        => 'textarea',
+            'description' => __('Optional case study. Features, integrations or architecture decisions you owned.', 'rickmanu'),
+            'rows'        => 3,
+        ],
+        'challenges'   => [
+            'label'       => __('Technical challenges', 'rickmanu'),
+            'type'        => 'textarea',
+            'description' => __('Optional case study. Implementation, architecture or integration problems solved.', 'rickmanu'),
+            'rows'        => 3,
+        ],
+        'results'      => [
+            'label'       => __('Results', 'rickmanu'),
+            'type'        => 'textarea',
+            'description' => __('Optional case study. What the solution enabled; only verifiable outcomes.', 'rickmanu'),
+            'rows'        => 3,
+        ],
+        'stack'        => [
             'label'       => __('Stack', 'rickmanu'),
             'type'        => 'text',
             'description' => __('Optional. Technologies separated by commas, e.g. "PHP, WordPress, React".', 'rickmanu'),
         ],
-        'github'      => [
+        'github'       => [
             'label'       => __('GitHub URL', 'rickmanu'),
             'type'        => 'url',
             'description' => __('Optional. Link to the source code.', 'rickmanu'),

@@ -7,6 +7,7 @@
     get_template_part('template-parts/front/about');
     get_template_part('template-parts/front/experience');
     get_template_part('template-parts/front/skills');
+    get_template_part('template-parts/front/services');
     get_template_part('template-parts/front/projects');
     ?>
 </main>

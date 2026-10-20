@@ -78,3 +78,29 @@ function rickmanu_language_switch(): void
     </div>
     <?php
 }
+
+/**
+ * Make the portfolio post types translatable, so each language shows its own
+ * experience and project posts instead of the same untranslated text.
+ *
+ * Posts without a language are left out of the front end by Polylang: assign
+ * one in the admin (Languages > Settings offers a bulk action) after enabling.
+ *
+ * @param string[] $post_types  Post types handled by Polylang, keyed by name.
+ * @param bool     $is_settings  Whether the list is built for the settings screen.
+ * @return string[]
+ */
+function rickmanu_translatable_post_types(array $post_types, bool $is_settings): array
+{
+    foreach ([RICKMANU_EXPERIENCE_POST_TYPE, RICKMANU_PROJECT_POST_TYPE] as $post_type) {
+        // Hidden from the settings screen so it cannot be unchecked; the theme relies on it.
+        if ($is_settings) {
+            unset($post_types[$post_type]);
+        } else {
+            $post_types[$post_type] = $post_type;
+        }
+    }
+
+    return $post_types;
+}
+add_filter('pll_get_post_types', 'rickmanu_translatable_post_types', 10, 2);

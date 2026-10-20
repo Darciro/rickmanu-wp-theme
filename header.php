@@ -44,7 +44,7 @@
             <div class="flex flex-none items-center gap-2.5">
                 <?php rickmanu_language_switch(); ?>
 
-                <a href="mailto:rickmanu@gmail.com" class="hidden md:inline-flex min-h-11 flex-none items-center gap-2 rounded-full bg-fg px-4.5 text-sm font-semibold text-ink transition-colors hover:bg-accent">
+                <a href="<?php echo esc_url(rickmanu_get_contact_mailto()); ?>" class="hidden md:inline-flex min-h-11 flex-none items-center gap-2 rounded-full bg-fg px-4.5 text-sm font-semibold text-ink transition-colors hover:bg-accent">
                     <span class="size-1.75 rounded-full bg-online" aria-hidden="true"></span>
                     <?php esc_html_e("Let's talk", 'rickmanu'); ?>
                 </a>

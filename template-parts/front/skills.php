@@ -126,7 +126,7 @@ $rickmanu_counter = sprintf(
         <?php /* translators: %s: search term typed by the visitor. */ ?>
         <span data-skills-empty-query data-template="<?php echo esc_attr__('grep: no match for "%s"', 'rickmanu'); ?>" class="font-mono text-sm text-fg-subtle"></span>
         <span class="font-display text-[28px] font-semibold"><?php esc_html_e('Not on the list yet — but I pick things up fast.', 'rickmanu'); ?></span>
-        <a href="mailto:rickmanu@gmail.com" class="font-medium text-accent hover:underline"><?php esc_html_e('Ask me about it →', 'rickmanu'); ?></a>
+        <a href="<?php echo esc_url(rickmanu_get_contact_mailto()); ?>" class="font-medium text-accent hover:underline"><?php esc_html_e('Ask me about it →', 'rickmanu'); ?></a>
     </div>
 
     <div data-skills-view="grouped" class="grid grid-cols-[repeat(auto-fit,minmax(min(340px,100%),1fr))] gap-4">
@@ -173,7 +173,7 @@ $rickmanu_counter = sprintf(
                 data-category="<?php echo esc_attr($rickmanu_item['category']); ?>"
                 style="--cat: <?php echo esc_attr($rickmanu_item['color']); ?>"
                 class="<?php echo esc_attr($rickmanu_chip_class); ?> text-base">
-                <span class="size-[7px] flex-none rounded-full bg-(--cat)" aria-hidden="true"></span>
+                <span class="size-1.75 flex-none rounded-full bg-(--cat)" aria-hidden="true"></span>
                 <span data-skill-label><?php echo esc_html($rickmanu_item['name']); ?></span>
             </li>
         <?php endforeach; ?>
